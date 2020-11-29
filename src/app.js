@@ -22,8 +22,8 @@ h2.innerHTML = changeTime(now);
 
 function showTemperature(response) {
   let temperature = response.data.main.temp;
-  let temperatureElement = document.querySelector("#real-data");
-  temperatureElement.innerHTML = `${Math.round(temperature)}°C`;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = `${Math.round(temperature)}`;
 }
 
 function citySearch(event) {
