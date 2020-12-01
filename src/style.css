@@ -44,7 +44,7 @@ article {
 }
 .weather-app-wrapper {
   margin: 30px auto;
-  max-width: 600px;
+  max-width: 700px;
 }
 .weather-app {
   padding: 20px;
@@ -78,13 +78,20 @@ strong {
   line-height: 1;
   font-weight: 400;
 }
-.units {
+.weather-app .units {
   position: relative;
 }
 .first {
-  margin: 5% 15%;
+  margin: 5% 10%;
 }
 .small {
   text-align: center;
   margin-top: 0;
+}
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
