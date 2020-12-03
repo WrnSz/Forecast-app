@@ -1,3 +1,23 @@
+.weather-forecast h3 {
+  color: blue;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+.weather-forecast-temp {
+  text-align: center;
+}
+
 .description {
   text-align: center;
   font-size: 18px;
@@ -72,7 +92,7 @@ li {
   font-weight: 100;
   line-height: 19px;
 }
-strong {
+#temperature {
   font-size: 60px;
   margin: 0 5px 0 5px;
   line-height: 1;
