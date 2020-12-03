@@ -27,7 +27,6 @@ function formatHours(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.main.temp;
   let cityElement = document.querySelector("#city");
@@ -123,3 +122,25 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let buttonLink = document.querySelector("#gps");
+buttonLink.addEventListener("click", locateMe);
+
+function locateMe(event) {
+  navigator.geolocation.getCurrentPosition(retrievePosition);
+}
+function retrievePosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "41d36454e5f3ee2db06d8969a9b290b7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function showTemperature(response) {
+  let weather = document.querySelector("#temperature");
+  weather.innerHTML = `${Math.round(response.data.main.temp)}`;
+  let mainTemperature = document.querySelector("#city");
+  mainTemperature.innerHTML = `${response.data.name}`;
+}
