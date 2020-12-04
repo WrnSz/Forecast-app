@@ -1,5 +1,5 @@
 .weather-forecast h3 {
-  color: blue;
+  color: #495057;
   font-size: 15px;
   font-weight: 400;
   text-align: center;
@@ -19,19 +19,20 @@
 }
 
 .description {
-  text-align: center;
+  text-align: left;
   font-size: 18px;
-  color: blue;
+  color: #495057;
 }
 h1 {
-  text-align: center;
+  text-align: left;
   color: #792653;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
 }
 h2 {
-  text-align: center;
+  text-align: left;
+  font-size: 18px;
 }
 .rain {
   text-align: center;
@@ -41,7 +42,7 @@ h2 {
 }
 
 form {
-  padding: 50px;
+  padding: 50px 0px 20px 0px;
 }
 article {
   text-align: center;
@@ -50,26 +51,22 @@ article {
   font-family: Arial, Helvetica, sans-serif;
   padding: 3%;
 }
-.fa-cloud-showers-heavy {
-  color: #495057;
-  font-size: 50px;
-}
-.fa-sun {
-  color: yellow;
-  font-size: 50px;
-}
-.fa-cloud {
-  color: blue;
-  font-size: 50px;
-}
+
 .weather-app-wrapper {
   margin: 30px auto;
-  max-width: 700px;
+  max-width: 650px;
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid;
+  border: 1px;
   border-radius: 10px;
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
+  box-shadow: 5px 2px 0 gainsboro;
 }
 .btn-primary {
   background-color: #495057;
@@ -79,10 +76,6 @@ article {
   text-align: center;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
 li {
   list-style: none;
   margin: 0;
@@ -102,7 +95,7 @@ li {
   position: relative;
 }
 .first {
-  margin: 5% 10%;
+  margin: 25px 0px 20px 90px;
 }
 .small {
   text-align: center;
@@ -114,4 +107,29 @@ li {
 }
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+#gps {
+  background-color: snow;
+  box-shadow: 5px 2px 0 tan;
+  border-radius: 4px;
+  border: none;
+  color: #792653;
+}
+#search {
+  background-color: snow;
+  box-shadow: 5px 2px 0 tan;
+  border-radius: 4px;
+  border: none;
+  color: #792653;
+}
+#search:hover {
+  background-color: tan;
+}
+#gps:hover {
+  background-color: tan;
+}
+.picture {
+  position: relative;
+  top: -5px;
 }
