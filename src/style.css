@@ -75,7 +75,9 @@ article {
 .location {
   text-align: center;
 }
-
+ul {
+  margin-left: -10px;
+}
 li {
   list-style: none;
   margin: 0;
@@ -91,11 +93,9 @@ li {
   line-height: 1;
   font-weight: 400;
 }
-.weather-app .units {
-  position: relative;
-}
+
 .first {
-  margin: 25px 0px 20px 90px;
+  margin: 20px 5px 20px 70px;
 }
 .small {
   text-align: center;
@@ -128,8 +128,4 @@ li {
 }
 #gps:hover {
   background-color: tan;
-}
-.picture {
-  position: relative;
-  top: -5px;
 }
